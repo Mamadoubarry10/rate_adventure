@@ -1,0 +1,3 @@
+class MessageBoard < ApplicationRecord
+  
+end

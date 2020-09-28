@@ -1,0 +1,12 @@
+<h1> <%= @user.name %> </h1>
+<h3><%=@user.age %></h3>
+<marquee behavior="" direction="">
+  <img src="<%= @user.image %>" alt="<%= @user.name%>">
+</marquee>
+
+<strong> Reservations: </h1></strong>
+<ul>
+<% @user.reservations.each do |res| %><br>
+  <li> <%= res.ride.name %> - Date/Time: <%= res.date_time %> </li><br>
+  <% end %>
+</ul>

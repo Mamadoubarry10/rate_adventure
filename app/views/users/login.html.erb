@@ -1,0 +1,9 @@
+<h1>Welcome to Rate Adventure, please log in</h1>
+
+<%= form_tag "/login" do  %>
+    <%= label_tag :name %>
+    <%= text_field_tag :name %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+    <%= submit_tag "Log in!" %>
+<% end %>
