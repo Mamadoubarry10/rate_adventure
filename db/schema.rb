@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_28_191410) do
+ActiveRecord::Schema.define(version: 2020_09_30_020901) do
 
   create_table "message_boards", force: :cascade do |t|
     t.integer "ride_id"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_09_28_191410) do
     t.integer "ride_id"
     t.integer "user_id"
     t.datetime "date_time"
-    t.boolean "status"
+    t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
