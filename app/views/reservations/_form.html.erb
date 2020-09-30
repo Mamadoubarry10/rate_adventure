@@ -1,5 +1,4 @@
 
-
 <%= form_for @reservation do |f| %><br>
 <%= f.label :ride_id %>
 <%= f.collection_select :ride_id, Ride.all, :id, :name %>

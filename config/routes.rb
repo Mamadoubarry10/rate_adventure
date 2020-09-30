@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :reservations
   resources :users
 
-
+  root "static_pages#home"
 
   get "/login", to: "users#login", as: "login"
   post "/login", to: "users#handle_login"

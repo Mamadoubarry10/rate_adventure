@@ -13,7 +13,7 @@
       <nav>
     
       <% if logged_in? %>
-        LOGGED IN AS: <%= @current_user.name %>
+        LOGGED IN AS: <%= link_to @current_user.name, user_path(@current_user) %>
         <%= button_to "LOG OUT HERE", "/logout", method: :delete %>
       <% else %>
         <%= link_to "Login Page", login_path %>
