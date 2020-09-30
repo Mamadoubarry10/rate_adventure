@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     before_action :find_user, only: [:show, :edit, :update, :destroy]
     skip_before_action :authorized, only: [:new, :create, :login, :handle_login]
 
-    
+
     def show
         
     end
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
 
         if @user && @user.authenticate(params[:password])
             session[:user] = @user.id
-            redirect_to user_path(@user)
+            redirect_to root_path
         else
             flash[:message] = "Incorrect Username or Password"
             redirect_to login_path
