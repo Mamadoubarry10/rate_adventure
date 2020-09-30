@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2020_09_28_191410) do
     t.integer "age"
     t.string "image"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

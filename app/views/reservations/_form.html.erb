@@ -4,7 +4,7 @@
 <%= f.label :ride_id %>
 <%= f.collection_select :ride_id, Ride.all, :id, :name %>
 
-<%= f.date_field :date_time, as: :date, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %>
+<%= f.datetime_select :date_time, { ampm: true, order: [:month, :day, :year] }, { class: "form-control" } %>
 
 <%= f.submit %>
 <% end %>

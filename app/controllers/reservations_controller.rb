@@ -1,15 +1,20 @@
 class ReservationsController < ApplicationController
 
-    before_action :find_res, only: [:edit, :destroy]
+    before_action :find_res, only: [:edit, :update, :destroy]
 
     def new
         @reservation = Reservation.new
     end
 
     def create
-        reservation = Reservation.create(res_params)
+        reservation = @current_user.reservations.create(res_params)
 
-        redirect_to user_path(reservation.user)
+        if reservation.valid?
+           redirect_to user_path(reservation.user)
+        else
+            flash[:my_errors] = reservation.errors.full_messages
+            redirect_to new_reservation_path
+        end
     end
 
     def edit
@@ -24,6 +29,7 @@ class ReservationsController < ApplicationController
 
     def destroy
         @reservation.destroy
+        redirect_to user_path(@current_user)
     end
 
     private

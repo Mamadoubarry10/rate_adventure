@@ -1,0 +1,9 @@
+
+<div class="index-container">
+  <% @rides.each do |ride| %>
+    <div class="index-card">
+      <h3><%= link_to ride.name, ride_path(ride) %></h3>
+      <img src="<%= ride.image %>" alt="<%ride.name%>" class="index-img">
+    </div>
+  <% end %>
+</div>

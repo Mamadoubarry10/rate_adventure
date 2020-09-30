@@ -16,5 +16,5 @@ User.create(name: "Mamadou Barry", age: 23, image: "https://scontent-lga3-1.xx.f
 
 Ride.create(name: "King da ka", image: "https://www.tripsavvy.com/thmb/3A3tpnGqCiwyoeN5IKKuotDEnJE=/950x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/4722410085_859ed85509_o-593e572a5f9b58d58ac35a11.jpg", description: "Worlds tallest Rollercoaster", price: 10, capacity: 50 )
 
-Reservation.create(ride_id: 6, user_id: 2, date_time: "09/07/2021", status: true)
+Reservation.create(ride_id: 1, user_id: 1, date_time: "09/07/2021", status: true)
 

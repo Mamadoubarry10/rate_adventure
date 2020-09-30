@@ -1,12 +1,46 @@
-<h1> <%= @user.name %> </h1>
-<h3><%=@user.age %></h3>
-<marquee behavior="" direction="">
-  <img src="<%= @user.image %>" alt="<%= @user.name%>">
-</marquee>
+<h1> <%= @user.name %> </h1> - <%= link_to 'Update Profile', edit_user_path(@current_user) %>
+<h3>Age: <%=@user.age %></h3>
 
-<strong> Reservations: </h1></strong>
-<ul>
-<% @user.reservations.each do |res| %><br>
-  <li> <%= res.ride.name %> - Date/Time: <%= res.date_time %> </li><br>
-  <% end %>
-</ul>
+<img src= "<%= @user.image %>" alt="<%= @user.name%>"><br>
+
+<br>
+
+
+<strong> Reservations: </h1> </strong> - <%= link_to "New Reservation?", new_reservation_path %>
+
+
+
+<div class='user-reservations'>
+    <% @user.reservations.each do |res| %>
+
+    <div class="column index_obj" >
+        <%= link_to ride_path(res.ride) do %>
+    
+        <div class="index_img row">
+        <p>
+            <h1> <%= res.ride.name %> </h1>
+             <div>
+               Date/Time: <%= res.date_time %>
+              </div>
+
+           
+        </p>
+        </div>
+        <div class="row">
+            <%= link_to edit_reservation_path(res) do %>
+            <div class="column edit">
+                <%= button_to "Edit" %>
+            </div>
+            <%end%>
+            <%= link_to res, method: :delete, data: {confirm: "Are You Sure?"} do%>
+            <div class="column delete">
+                <%= button_to "Delete" %>
+            </div>
+            <%end%>
+    </div>
+</div>
+
+    <%end%>
+    <%end%>
+ 
+</div>
