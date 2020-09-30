@@ -4,7 +4,7 @@
 <%= f.label :ride_id %>
 <%= f.collection_select :ride_id, Ride.all, :id, :name %>
 
-<%= f.datetime_select :date_time, { ampm: true, order: [:month, :day, :year] }, { class: "form-control" } %>
+<%= f.datetime_select :check_out_req, { ampm: true, order: [:day, :month, :year] }, { class: "form-control" } %>
 
 <%= f.submit %>
 <% end %>
