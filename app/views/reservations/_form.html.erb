@@ -1,13 +1,14 @@
 
+<div class= "reservation">
+ <%= form_for @reservation do |f| %><br>
+ <h1><%= f.label :ride_id %><br></h1>
+ <%= f.collection_select :ride_id, Ride.all, :id, :name %><br>
 
-<%= form_for @reservation do |f| %><br>
-<%= f.label :ride_id %><br>
-<%= f.collection_select :ride_id, Ride.all, :id, :name %><br>
+ <h3>Time: <%= f.time_field :date_time, as: :time, value: f.object.try(:strftime,"%h:%h:%s %z"), class: 'form-control' %><br><br></h3>
 
-<%= f.time_field :date_time, as: :time, value: f.object.try(:strftime,"%h:%h:%s %z"), class: 'form-control' %>
-
-<%= f.date_field :date_time, as: :date, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %>
+ <h3> Date: <%= f.date_field :date_time, as: :date, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %><br><br></h3>
 
 
-<%= f.submit %>
-<% end %>
+ <%= f.submit %>
+ <% end %>
+</div>

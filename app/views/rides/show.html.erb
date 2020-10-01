@@ -27,10 +27,16 @@
 
 <ul>
   <% @ride.message_boards.each do |mess| %>
-       <li> User: <%= mess.user.name %> - <%= mess.comment %> - Rating: <%= mess.rating %> </li>
+       <li> 
+          User: <%= mess.user.name %> - <%= mess.comment %> - Rating: <%= mess.rating %> -
+           <% if @current_user == mess.user %>
+            <%= button_to "Delete Comment", message_board_path(mess), method: :delete %>
+          <% end %>
+        </li>
     <% end %>
 
   </ul>
+
 
   
 
