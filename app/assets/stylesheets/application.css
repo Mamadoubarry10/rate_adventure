@@ -13,3 +13,75 @@
  *= require_tree .
  *= require_self
  */
+
+ body{
+     background-color:white;
+ }
+ .login{
+    position: relative;
+    background: rgb(144, 171, 172);
+    max-width: 500px;
+    max-height: 40px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    color: black;
+    font-size: larger;
+    border-radius: 25px;
+    
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  .button{
+      text-align: center;
+      color: green;
+  }
+
+  .login-h1{
+      text-align: center;
+      color: rgb(145, 90, 7);
+  }
+a {
+    text-decoration: none;
+}
+
+li:hover{
+background-color: cyan;
+
+transition: 2s;
+}
+.background-image{
+    min-height: 300px;
+    line-height: 300px;
+    text-align: center;
+    max-width: 60%;
+    margin: 0px auto;
+    background-image: url(https://home.bt.com/images/200-years-of-roller-coasters-everything-you-need-to-know-about-their-history-136420406706703901-170816142659.jpg);
+    background-repeat: repeat-x;
+    border-radius: 55px;
+}
+.new-user{
+    text-align: center;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }

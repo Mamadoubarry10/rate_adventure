@@ -18,3 +18,5 @@ Ride.create(name: "King da ka", image: "https://www.tripsavvy.com/thmb/3A3tpnGqC
 
 Reservation.create(ride_id: 1, user_id: 1, date_time: "09/07/2021", status: true)
 
+MessageBoard.create(ride_id: 1, user_id: 2, comment: "Loved this ride!!", rating: 5)
+
