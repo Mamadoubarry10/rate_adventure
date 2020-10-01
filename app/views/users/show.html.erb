@@ -2,8 +2,8 @@
 <div class="card">
   <img src= "<%= @user.image %>" alt="<%= @user.name%>" style="width:50%">
   <div class="container">
-    <h1><b><%= @user.name %> </b></h1> 
-    <h3> <%=@user.age %></h3> 
+    <h1><b> Name:<%= @user.name %> </b></h1> 
+    <h3> Age: <%=@user.age %></h3> 
     <%= button_to 'Update Info', edit_user_path(@current_user), method: :get, class:"myClass" %>
   </div>
 </div>
@@ -22,7 +22,7 @@
        <img src="<%= res.ride.image %>" alt="<%= res.ride.image%>" style="width:60%"><br>
 
         <h3> Reservation Time: <%= res.date_time.strftime(" %m/%d/%Y at %I:%M")%></h3> <br>
-        <%= button_to 'Update Info', edit_reservation_path(res), method: :get, class:"myClass" %>
+        <%= button_to 'Update Reservation', edit_reservation_path(res), method: :get, class:"myClass" %>
          
       
         <div class="row">
@@ -32,9 +32,10 @@
             
             <%end%>
             <%= link_to res, method: :delete, data: {confirm: "Are You Sure?"} do%>
-            
-                <%= button_to "Delete" , class:"myClass" %><br>
+              <div class="mydelete" >
+                <%= button_to "Delete Reservation?" , class:"myClass" %><br>
                 <br>
+                </div>
            
             <%end%>
           </div>
