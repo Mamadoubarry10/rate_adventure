@@ -2,31 +2,23 @@
  <h1> <%= @user.name %> </h1>
  <h3>Age: <%=@user.age %></h3>
 
- <img src= “<%= @user.image %>” alt=“<%= @user.name%>“><br>
+ <img src= "<%= @user.image %>" alt="<%= @user.name%>"><br>
 
 <br>
 
 
-<strong> Reservations: </h1> </strong> - <%= link_to "New Reservation?", new_reservation_path %>
+<strong> Reservations: </strong>
 
 
 
-<div class='user-reservations'>
+<div class="main-div">
     <% @user.reservations.each do |res| %>
+        <%= link_to res.ride.name, ride_path(res.ride) %><br>
+       <img src="<%= res.ride.image %>" alt="<%= res.ride.image%>"><br>
 
-    <div class="column index_obj" >
-        <%= link_to ride_path(res.ride) do %>
-    
-        <div class="index_img row">
-        <p>
-            <h1> <%= res.ride.name %> </h1>
-             <div>
-               Date/Time: <%= res.date_time %>
-              </div>
-
-           
-        </p>
-        </div>
+        Date/Time: <%= res.date_time.strftime(" %m/%d/%Y at %I:%M")%> <br>
+        
+      
         <div class="row">
             <%= link_to edit_reservation_path(res) do %>
             <div class="column edit">
@@ -34,14 +26,12 @@
             </div>
             <%end%>
             <%= link_to res, method: :delete, data: {confirm: "Are You Sure?"} do%>
-            <div class="column delete">
-                <%= button_to "Delete" %>
+            <div class="btn delete">
+                <%= button_to "Delete" %><br>
+                <br>
             </div>
             <%end%>
-    </div>
+          </div>
+    <%end%>
 </div>
-
-    <%end%>
-    <%end%>
  
-</div>

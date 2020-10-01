@@ -1,9 +1,13 @@
 
-<%= form_for @reservation do |f| %><br>
-<%= f.label :ride_id %>
-<%= f.collection_select :ride_id, Ride.all, :id, :name %>
 
-<%= f.datetime_select :date_time, { ampm: true, order: [:month, :day, :year] }, { class: "form-control" } %>
+<%= form_for @reservation do |f| %><br>
+<%= f.label :ride_id %><br>
+<%= f.collection_select :ride_id, Ride.all, :id, :name %><br>
+
+<%= f.time_field :date_time, as: :time, value: f.object.try(:strftime,"%h:%h:%s %z"), class: 'form-control' %>
+
+<%= f.date_field :date_time, as: :date, value: f.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %>
+
 
 <%= f.submit %>
 <% end %>

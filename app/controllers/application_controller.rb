@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
     before_action :authorized
 
 
-    # Allows you to use this method in the views
+    
     helper_method :logged_in?
     
 

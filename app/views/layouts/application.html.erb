@@ -9,16 +9,25 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
+
+
   <body>
-      <nav>
-    
-      <% if logged_in? %>
-        LOGGED IN AS: <%= link_to @current_user.name, user_path(@current_user) %>
-        <%= button_to "LOG OUT HERE", "/logout", method: :delete %>
-      <% else %>
-        <%= link_to "Login Page", login_path %>
-      <% end %>
-    </nav>
+  <% if logged_in? %>
+     <div class="topnav">
+     <a> <%= link_to "Home", root_path %> </a>
+     <a> <%= link_to "Rides", rides_path %> </a>
+     <a> <%= link_to "Reservation", new_reservation_path %> </a>
+     <a> <%= link_to "Profile", user_path(@current_user) %> </a>
+     <a> <%= link_to "Rate Ride", new_message_board_path %> </a>
+     <a> <%= link_to "Sign Out", "/logout", method: :delete %></a>
+     <a> Logged in as: <%=  @current_user.name%> </a>
+  
+     <% end %>
+ 
+    </div>
+      
+     
     <%= yield %>
   </body>
 </html>

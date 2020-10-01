@@ -5,8 +5,11 @@ Rails.application.routes.draw do
   resources :rides
   resources :reservations
   resources :users
+  resources :message_boards
 
   root "static_pages#home"
+
+  mount Commontator::Engine => '/commontator'
 
   get "/login", to: "users#login", as: "login"
   post "/login", to: "users#handle_login"
