@@ -64,7 +64,7 @@ transition: 2s;
 
 .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #792594;
   }
   
   .topnav a {
@@ -79,9 +79,138 @@ transition: 2s;
   .topnav a:hover {
     background-color: #ddd;
     color: black;
+    border-radius: 25px;
+    transition: 1s;
   }
   
   .topnav a.active {
     background-color: #4CAF50;
     color: white;
   }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    background-color: darkgray;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
+  .myClass {
+      
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+html, body{ 
+    width:100%;
+    font-family: "Lobster", serif;
+  }
+.home-image{
+    width: 100%;
+    margin:0px auto;
+}
+.home-h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: goldenrod;
+}
+
+.home-page{
+    background: url(https://all.accor.com/magazine/imagerie/dubai-six-flags_72dpi-2f4c.jpg); 
+    background-repeat: repeat-x;
+   
+    min-height: 300px;
+    line-height: 300px;
+    text-align: center;
+    max-width: 100%;
+    margin: 0px auto;
+    
+}
+
+.main-div{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 50%;
+    background-color: darkgreen;
+}
+.resevation{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: goldenrod;
+}
+.ride-h1{
+    text-align:center ;
+
+}
+.btnedit{
+    text-align: center;
+    color: rgb(128, 0, 75);
+    background-color: aqua;
+}
+.index-card{
+    position: center;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 5px;
+    background-color: darkgray;
+    
+    flex-direction: row-reverse;
+    
+}
+
+path {
+  fill: transparent;
+}
+
+
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .reservation{
+      text-align: center;
+      background-color: darkgray;
+  }
+
+  .h1-res{
+    text-align:center ;
+    color: #4CAF50;
+  }
+
+  .myClass1{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+  }
+  

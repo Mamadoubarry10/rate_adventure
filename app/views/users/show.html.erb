@@ -1,35 +1,41 @@
- <%= link_to 'Update Info', edit_user_path(@current_user) %> <%= link_to "Home", root_path %><br>
- <h1> <%= @user.name %> </h1>
- <h3>Age: <%=@user.age %></h3>
 
- <img src= "<%= @user.image %>" alt="<%= @user.name%>"><br>
+<div class="card">
+  <img src= "<%= @user.image %>" alt="<%= @user.name%>" style="width:50%">
+  <div class="container">
+    <h1><b><%= @user.name %> </b></h1> 
+    <h3> <%=@user.age %></h3> 
+    <%= button_to 'Update Info', edit_user_path(@current_user), method: :get, class:"myClass" %>
+  </div>
+</div>
 
-<br>
 
+<div class="resevation">
+<h1>Reservations</h1>
+</div>
 
-<strong> Reservations: </strong>
 
 
 
 <div class="main-div">
     <% @user.reservations.each do |res| %>
-        <%= link_to res.ride.name, ride_path(res.ride) %><br>
-       <img src="<%= res.ride.image %>" alt="<%= res.ride.image%>"><br>
+        <h1 class ="ride-h1"><%= link_to res.ride.name, ride_path(res.ride) %></h1><br>
+       <img src="<%= res.ride.image %>" alt="<%= res.ride.image%>" style="width:60%"><br>
 
-        Date/Time: <%= res.date_time.strftime(" %m/%d/%Y at %I:%M")%> <br>
-        
+        <h3> Reservation Time: <%= res.date_time.strftime(" %m/%d/%Y at %I:%M")%></h3> <br>
+        <%= button_to 'Update Info', edit_reservation_path(res), method: :get, class:"myClass" %>
+         
       
         <div class="row">
             <%= link_to edit_reservation_path(res) do %>
-            <div class="column edit">
-                <%= button_to "Edit" %>
-            </div>
+          
+  
+            
             <%end%>
             <%= link_to res, method: :delete, data: {confirm: "Are You Sure?"} do%>
-            <div class="btn delete">
-                <%= button_to "Delete" %><br>
+            
+                <%= button_to "Delete" , class:"myClass" %><br>
                 <br>
-            </div>
+           
             <%end%>
           </div>
     <%end%>

@@ -1,19 +1,20 @@
 <% if flash[:my_errors] %>
-
     <% flash[:my_errors].each do |er| %>
          <%= er %> 
     <% end %>
 
 <% end %>
 
-
+<h1 class = "h1-res"> Rate Ride</h1>
+<div class= "reservation">
 <%= form_for @message_board do |f| %>
-    <%= f.label :ride_id %><br>
-    <%= f.collection_select :ride_id, Ride.all, :id, :name %><br>
-    <%= f.label :rating %><br>
-    <%= f.number_field :rating %><br>
-    <%= f.label :comment %><br>
-    <%= f.text_area :comment %><br>
+    <h3><%= f.label :ride_id %></h3>
+    <%= f.collection_select :ride_id, Ride.all, :id, :name %><br><br>
+    <%= f.label :rating %>
+    <%= f.number_field :rating %><br><br>
+    <%= f.label :comment %>
+    <%= f.text_area :comment %><br><br>
     
     <%= f.submit "Submit Review!" %>
 <% end %>
+</div>

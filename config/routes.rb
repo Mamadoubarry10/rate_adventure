@@ -9,8 +9,6 @@ Rails.application.routes.draw do
 
   root "static_pages#home"
 
-  mount Commontator::Engine => '/commontator'
-
   get "/login", to: "users#login", as: "login"
   post "/login", to: "users#handle_login"
   delete "/logout", to: "users#logout"

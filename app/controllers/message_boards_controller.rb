@@ -27,11 +27,13 @@ class MessageBoardsController < ApplicationController
     end
 
     def update
-        message_board.update(mess_params)
-        redirect_to ride_path(message_board.ride)
+        @message_board.update(mess_params)
+
+        
+        redirect_to ride_path(@message_board.ride)
     end
 
-    def destroy
+    def destroy  
         @message_board.destroy
         redirect_to rides_path
     end
@@ -44,7 +46,7 @@ class MessageBoardsController < ApplicationController
     end
 
     def find_mess 
-        @message_board = MessageBoard.find(params[id])
+        @message_board = MessageBoard.find(params[:id])
     end
 
 end
