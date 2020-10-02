@@ -43,11 +43,7 @@ a {
     text-decoration: none;
 }
 
-li:hover{
-background-color: cyan;
 
-transition: 2s;
-}
 .background-image{
     min-height: 300px;
     line-height: 300px;
@@ -110,7 +106,7 @@ transition: 2s;
     background-color: #f2f2f2;
     border: none;
     border-radius: 15px;
-    padding: 15px 32px;
+    padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -134,22 +130,26 @@ html, body{
 .home-image{
     width: 100%;
     margin:0px auto;
+    
 }
 .home-h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
-    color: goldenrod;
+    
 }
 
 .home-page{
-    background: url(https://all.accor.com/magazine/imagerie/dubai-six-flags_72dpi-2f4c.jpg); 
-    background-repeat: repeat-x;
-   
-    min-height: 300px;
-    line-height: 300px;
+    background: url(https://all.accor.com/magazine/imagerie/dubai-six-flags_72dpi-2f4c.jpg)no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 400px;
+    line-height: 800px;
     text-align: center;
     max-width: 100%;
     margin: 0px auto;
+    position: relative;
     
 }
 
@@ -204,7 +204,7 @@ path {
 }
 
 
-input[type=text], select {
+/* input[type=text], select {
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -212,7 +212,7 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-  }
+  } */
 
   .reservation{
     position: center;
@@ -253,4 +253,9 @@ input[type=text], select {
     margin: 4px 2px;
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgb(142 0 255 / 76%);
+  }
+
+  .mydelete:hover{
+    transition: 1s;
+    background-color: rgb(142 0 255 / 70%)
   }

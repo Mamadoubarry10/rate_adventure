@@ -1,36 +1,24 @@
 
- <h1> <%= @ride.name %> </h1>
 
-
-  <img src="<%= @ride.image %>" alt="<%= @ride.name%>"><br>
-
-  <br>
-
-<strong> Description: </strong><br>
-  <%= @ride.description %><br>
-
-  <br>
-
-  <strong> Price: </strong><br>
-  <%= @ride.price %><br>
-
-  <br>
-
-  <strong> Capacity: </strong><br>
-  <%= @ride.capacity %><br>
-
-  <br>
-
-  <strong> Comments/Ratings: </strong>
-
-  <br>
-
+  <div class="card">
+  <h1><b> Name: <%= @ride.name %> </b></h1> 
+  
+  <div class="container">
+  <img src= "<%= @ride.image %>" alt="<%= @ride.name%>" style="width:50%">
+    <p> Description: <%= @ride.description %></p>
+    <h3> Capacity: <%=@ride.capacity %></h3> 
+  </div>
+</div>
+ <h1><strong> Comments/Ratings: </strong></h1>
 <ul>
   <% @ride.message_boards.each do |mess| %>
        <li> 
-          User: <%= mess.user.name %> - <%= mess.comment %> - Rating: <%= mess.rating %> -
+          <b><%= mess.user.name %> </b><br>
+            Rating: <%= mess.rating %> <br>
+             <%= mess.comment %> 
            <% if @current_user == mess.user %>
-            <%= button_to "Delete Comment", message_board_path(mess), method: :delete %>
+            <%= button_to "Delete", message_board_path(mess), method: :delete, class:"myClass"%> <%= button_to "Update", edit_message_board_path(mess), method: :get, class:"myClass"%>
+            
           <% end %>
         </li>
     <% end %>
