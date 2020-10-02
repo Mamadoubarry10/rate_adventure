@@ -1,8 +1,8 @@
 
 <div class="card">
-  <img src= "<%= @user.image %>" alt="<%= @user.name%>" style="width:50%">
+  <img src= "<%= @user.image %>" alt="<%= @user.name%>" style="width:50%; border-radius: 50%; box-shadow: 0 4px 8px 0 rgb(142 0 255 / 76%);">
   <div class="container">
-    <h1><b> Name:<%= @user.name %> </b></h1> 
+    <h1><b><%= @user.name %> </b></h1> 
     <h3> Age: <%=@user.age %></h3> 
     <%= button_to 'Update Info', edit_user_path(@current_user), method: :get, class:"myClass" %>
   </div>

@@ -7,18 +7,18 @@
 </ul>
 <div class= "reservation">
  <%= form_for @user do |f| %>
-    <%= f.label :name %> 
+    <%= f.label :name %> <br>
     <%= f.text_field :name %><br>
-    <%= f.label :email %>
+    <%= f.label :email %><br>
     <%= f.text_field :email %><br>
-    <%= f.label :age %>
+    <%= f.label :age %><br>
     <%= f.number_field :age %><br>
-    <%= f.label :image %>
+    <%= f.label :image %><br>
     <%= f.text_field :image %><br>
-    <%= f.label :password %>
+    <%= f.label :password %><br>
     <%= f.password_field :password %><br>
-    <%= f.label :password_confirmation %>
+    <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation %><br>
-    <%= f.submit %>
+    <%= f.submit class: "myClass"%>
  <% end %>
 </div>
