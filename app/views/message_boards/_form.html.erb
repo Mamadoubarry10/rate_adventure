@@ -7,7 +7,7 @@
 
 <h1 class = "h1-res"> Rate Ride</h1>
 <div class= "reservation">
-<%= form_for @message_board do |f| %>
+  <%= form_for @message_board do |f| %>
     <h3><%= f.label :ride_id %></h3>
     <%= f.collection_select :ride_id, Ride.all, :id, :name %><br><br>
     <%= f.label :rating %>
@@ -15,6 +15,6 @@
     <%= f.label :comment %>
     <%= f.text_area :comment %><br><br>
     
-    <%= f.submit "Submit Review!" %>
-<% end %>
+    <%= f.submit "comment", class:"myClass"%>
+ <% end %>
 </div>
