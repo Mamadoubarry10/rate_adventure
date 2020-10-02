@@ -3,6 +3,9 @@
 <div class= "background-image">
   <h1 class= "login-h1">Welcome to Rate Adventure</h1>
 </div>
+<% if flash[:message] %>
+   <p class="flash"> <%= flash[:message] %> </p>
+<% end %>
  <div class="login" >
     <%= form_tag "/login" do  %>
     <%= label_tag :name %>
